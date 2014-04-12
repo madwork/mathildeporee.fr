@@ -1,0 +1,50 @@
+---
+title: Mathilde Porée &mdash; Dessin
+---
+<%
+  gallery = [
+    { file: "capreolus-capreolus", title: "Capreolus, Capreolus, 2014, encre de chine, 120x150cm" },
+    { file: "volatile-1", title: "Volatile I, 2014, encre de chine, 42x59cm" },
+    { file: "volatile-2", title: "Volatile II, 2014, encre de chine, 42x59cm" },
+    { file: "vulpes-vulpes", title: "Vulpes, vulpes, 2013, graphite et encre de chine, 100x100cm" },
+    { file: "peau-de-chagrin", title: "Peau de chagrin, Geai, 2012, stylo et feutre" },
+    { file: "resurrection-1", title: "Résurrection I, 2012, stylo et encre de chine, 120x150cm, réalisé avec Guillaume Querré" },
+    { file: "resurrection-2", title: "Résurrection II, 2013, stylo et aquarelle, 105×157.5cm, réalisé avec Guillaume Querré" },
+    { file: "variations", title: "Variations, 2013, aquarelle, 6x11cm" },
+    { file: "variations-expo", title: "Variations, 2013, vue de l'exposition Mauvaises Graines" }
+  ]
+%>
+
+<div id="dessin">
+  <% gallery.each do |image| %>
+  <div class="item">
+    <% link_to "/images/dessin/#{image[:file]}.jpg", class: "gallery", rel: "gallery", title: image[:title] do %>
+      <%= image_tag "dessin/#{image[:file]}_thumb.jpg" %>
+    <% end %>
+  </div>
+  <% end %>
+  <div class="item">
+    <% link_to "/dessin/mythes", title: "Mythes, 2009-2010, stylo, 14x14cm" do %>
+      <%= image_tag "dessin/mythes_thumb.jpg" %>
+    <% end %>
+  </div>
+</div>
+
+<script>
+  var container = document.querySelector('#dessin');
+  var msnry;
+  // initialize Masonry after all images have loaded
+  imagesLoaded( container, function() {
+    msnry = new Masonry( container, { itemSelector: '.item', gutter: 10, isFitWidth: true } );
+  });
+
+  $('.gallery').colorbox({
+    rel:'gallery',
+    transition:"none",
+    height:"75%",
+    closeButton: false,
+    previous: "",
+    next: "",
+    current: ""
+  });
+</script>

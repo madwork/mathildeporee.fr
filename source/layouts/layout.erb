@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta property="og:title" content="Mathilde Por&#xe9;e">
+    <meta property="og:type" content="author">
+    <meta property="og:url" content="http://www.mathildeporee.fr/">
+    <meta property="og:image" content="http://www.mathildeporee.fr/images/vulpes-vulpes-facebook.jpg">
+    <meta property="og:site_name" content="Mathilde Por&#xe9;e">
+    <title><%= current_page.data.title || "Mathilde Porée" %></title>
+    <%= stylesheet_link_tag "bootstrap", "colorbox", "all" %>
+    <%= javascript_include_tag "all" %>
+  </head>
+  <body>
+    <header class="container">
+      <nav>
+        <ul>
+          <li><a href="/evenements">En ce moment</a></li>
+          <li><a href="/photographie">Photographie</a></li>
+          <li><a href="/dessin">Dessin</a></li>
+          <li><a href="#">Volume</a></li>
+          <li><a href="#">Vidéo</a></li>
+          <li><a href="#">CV</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Liens</a></li>
+        </ul>
+      </nav>
+      <% link_to "/" do %>
+        <h1>Mathilde Porée</h1>
+      <% end %>
+    </header>
+    <div class="container">
+      <%= yield %>
+    </div>
+    <footer class="container">
+      <p>Copyright © 2010-2014 &middot; All Rights Reserved &middot; Mathilde Porée</p>
+    </footer>
+  </body>
+</html>
