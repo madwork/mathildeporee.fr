@@ -1,0 +1,32 @@
+---
+title: Mathilde Porée &mdash; Herbier
+---
+<%
+  herbier = (1..29).map{ |i| { name: "herbier#{sprintf("%02d", i)}", title: "Herbier, 2012, aquarelle, 14x14cm" } }
+%>
+
+<div id="herbier" class="center">
+  <% herbier.each do |image| %>
+  <div class="item p5">
+    <%= gallery image, "dessin/herbier" %>
+  </div>
+  <% end %>
+</div>
+
+<script>
+  var container = document.querySelector('#herbier');
+  var msnry;
+  imagesLoaded( container, function() {
+    msnry = new Masonry( container, { itemSelector: '.item', gutter: 10, isFitWidth: true } );
+  });
+
+  $('.gallery').colorbox({
+    rel:'gallery',
+    transition:"none",
+    height:"75%",
+    closeButton: false,
+    previous: "",
+    next: "",
+    current: ""
+  });
+</script>
