@@ -55,8 +55,8 @@ activate :livereload
 
 helpers do
   def gallery(image, url_prefix = "")
-    link_to File.join(images_dir, url_prefix, "#{image[:name]}.jpg"), class: "gallery", rel: "gallery", title: image[:title] do
-      image_tag File.join(url_prefix, "#{image[:name]}_thumb.jpg")
+    link_to File.join(images_dir, url_prefix, "#{image[:name]}.jpg"), class: "gallery", title: image[:title] do
+      image_tag File.join(url_prefix, "#{image[:name]}_thumb.jpg"), alt: image[:name]
     end
   end
 end
