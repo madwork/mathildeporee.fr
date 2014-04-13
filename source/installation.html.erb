@@ -1,0 +1,36 @@
+---
+title: Mathilde Porée &mdash; Installation
+---
+<%
+  installation = [
+    { name: "installation01", title: "Vue d'exposition, Portbail, 2010" },
+    { name: "installation02", title: "Vue d'exposition, Portbail, 2010" },
+    { name: "installation03", title: "Vue d'exposition, Portbail, 2010" }
+  ]
+%>
+
+<div id="installation" class="center">
+  <% installation.each do |image| %>
+  <div class="item p2">
+    <%= gallery image, "installation" %>
+  </div>
+  <% end %>
+</div>
+
+<script>
+  var container = document.querySelector('#installation');
+  var msnry;
+  imagesLoaded( container, function() {
+    msnry = new Masonry( container, { itemSelector: '.item', gutter: 3, isFitWidth: true } );
+  });
+
+  $('.gallery').colorbox({
+    rel:'gallery',
+    transition:"none",
+    height:"75%",
+    closeButton: false,
+    previous: "",
+    next: "",
+    current: ""
+  });
+</script>

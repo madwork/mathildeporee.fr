@@ -2,19 +2,19 @@
 title: Mathilde Porée &mdash; Photographie
 ---
 <%
-  poussiere = (1..9).map{ |i| { name: "poussiere/poussiere#{sprintf("%02d", i)}", title: "Poussière, 2012, photographie numérique, 49x61cm" } }
-  fossiles = (1..20).map{ |i| { name: "fossiles/fossiles#{sprintf("%02d", i)}", title: "Fossiles, 2009, photographies argentiques, 22x22cm" } }
+  poussiere = (1..9).map{ |i| { name: "poussiere#{sprintf("%02d", i)}", title: "Poussière, 2012, photographie numérique, 49x61cm" } }
+  fossiles = (1..20).map{ |i| { name: "fossiles#{sprintf("%02d", i)}", title: "Fossiles, 2009, photographies argentiques, 22x22cm" } }
 %>
 
 <div id="photographie" class="center">
   <% poussiere.each do |image| %>
   <div class="item p2">
-    <%= gallery image, "photographie" %>
+    <%= gallery image, "photographie/poussiere" %>
   </div>
   <% end %>
   <% fossiles.each do |image| %>
   <div class="item p2 w15">
-    <%= gallery image, "photographie" %>
+    <%= gallery image, "photographie/fossiles" %>
   </div>
   <% end %>
 </div>

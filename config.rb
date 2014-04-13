@@ -1,3 +1,7 @@
+require 'builder'
+
+page "/sitemap.xml", layout: false
+
 ###
 # Compass
 ###
