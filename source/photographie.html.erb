@@ -2,23 +2,19 @@
 title: Mathilde Porée &mdash; Photographie
 ---
 <%
-  poussiere = (1..9).map{ |i| { file: "poussiere/poussiere#{sprintf("%02d", i)}", title: "Poussière, 2012, photographie numérique, 49x61cm" } }
-  fossiles = (1..20).map{ |i| { file: "fossiles/fossiles#{sprintf("%02d", i)}", title: "Fossiles, 2009, photographies argentiques, 22x22cm" } }
+  poussiere = (1..9).map{ |i| { name: "poussiere/poussiere#{sprintf("%02d", i)}", title: "Poussière, 2012, photographie numérique, 49x61cm" } }
+  fossiles = (1..20).map{ |i| { name: "fossiles/fossiles#{sprintf("%02d", i)}", title: "Fossiles, 2009, photographies argentiques, 22x22cm" } }
 %>
 
-<div id="photographie">
+<div id="photographie" class="center">
   <% poussiere.each do |image| %>
-  <div class="item">
-    <% link_to "/images/photographie/#{image[:file]}.jpg", class: "gallery", rel: "gallery", title: image[:title] do %>
-      <%= image_tag "photographie/#{image[:file]}_thumb.jpg" %>
-    <% end %>
+  <div class="item p2">
+    <%= gallery image, "photographie" %>
   </div>
   <% end %>
   <% fossiles.each do |image| %>
-  <div class="item w2">
-    <% link_to "/images/photographie/#{image[:file]}.jpg", class: "gallery", rel: "gallery", title: image[:title] do %>
-      <%= image_tag "photographie/#{image[:file]}_thumb.jpg" %>
-    <% end %>
+  <div class="item p2 w15">
+    <%= gallery image, "photographie" %>
   </div>
   <% end %>
 </div>
@@ -26,7 +22,6 @@ title: Mathilde Porée &mdash; Photographie
 <script>
   var container = document.querySelector('#photographie');
   var msnry;
-  // initialize Masonry after all images have loaded
   imagesLoaded( container, function() {
     msnry = new Masonry( container, { itemSelector: '.item', gutter: 3, isFitWidth: true } );
   });

@@ -49,6 +49,14 @@ activate :livereload
 #   end
 # end
 
+helpers do
+  def gallery(image, url_prefix = "")
+    link_to File.join(images_dir, url_prefix, "#{image[:name]}.jpg"), class: "gallery", rel: "gallery", title: image[:title] do
+      image_tag File.join(url_prefix, "#{image[:name]}_thumb.jpg")
+    end
+  end
+end
+
 set :css_dir,     'stylesheets'
 set :js_dir,      'javascripts'
 set :images_dir,  'images'

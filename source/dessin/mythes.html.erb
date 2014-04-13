@@ -1,18 +1,25 @@
+---
+title: Mathilde Porée &mdash; Mythes
+---
 <%
-  mythes = (1..50).map{ |i| { file: "mythes/mythes#{sprintf("%02d", i)}", title: "Mythes, 2009-2010, stylo, 14x14cm" } }
+  mythes = (1..50).map{ |i| { name: "mythes#{sprintf("%02d", i)}", title: "Mythes, 2009-2010, stylo, 14x14cm" } }
 %>
 
-<div class="row">
+<div id="mythes" class="center">
   <% mythes.each do |image| %>
-  <div class="col-xs-6 col-md-3">
-    <% link_to "/images/dessin/#{image[:file]}.jpg", class: "gallery", rel: "gallery", title: image[:title] do %>
-      <%= image_tag "dessin/#{image[:file]}_thumb.jpg" %>
-    <% end %>
+  <div class="item p5">
+    <%= gallery image, "dessin/mythes" %>
   </div>
   <% end %>
 </div>
 
 <script>
+  var container = document.querySelector('#mythes');
+  var msnry;
+  imagesLoaded( container, function() {
+    msnry = new Masonry( container, { itemSelector: '.item', gutter: 10, isFitWidth: true } );
+  });
+
   $('.gallery').colorbox({
     rel:'gallery',
     transition:"none",
