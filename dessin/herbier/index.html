@@ -38,10 +38,10 @@
       </nav>
       <h1><a href="/">Mathilde Porée</a></h1>
     </header>
-    <div class="container">
+    <div class="container min360">
       
 
-<div id="herbier" class="center">
+<div id="herbier" class="center-block none">
   
   <div class="item p5">
     <a class="gallery" title="Herbier, 2012, aquarelle, 14x14cm" href="/dessin/images/herbier/herbier01.jpg"><img alt="herbier01" src="/images/herbier/herbier01_thumb.jpg" /></a>
@@ -161,22 +161,15 @@
   
 </div>
 
-<script>
-  var container = document.querySelector('#herbier');
-  var msnry;
-  imagesLoaded( container, function() {
-    msnry = new Masonry( container, { itemSelector: '.item', gutter: 10, isFitWidth: true } );
-  });
+<div id="spinner">
+  <div class="bounce1"></div>
+  <div class="bounce2"></div>
+  <div class="bounce3"></div>
+</div>
 
-  $('.gallery').colorbox({
-    rel:'gallery',
-    transition:"none",
-    height:"75%",
-    closeButton: false,
-    previous: "",
-    next: "",
-    current: ""
-  });
+<script>
+  gallery(document.querySelector('#herbier'), { itemSelector: '.item', gutter: 10, isFitWidth: true });
+  $('.gallery').colorbox(colorbox_options);
 </script>
 
     </div>

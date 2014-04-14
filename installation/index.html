@@ -38,10 +38,10 @@
       </nav>
       <h1><a href="/">Mathilde Porée</a></h1>
     </header>
-    <div class="container">
+    <div class="container min360">
       
 
-<div id="installation" class="center">
+<div id="installation" class="center-block none">
   
   <div class="item p2">
     <a class="gallery" title="Vue d'exposition, Portbail, 2010" href="/images/installation/installation01.jpg"><img alt="installation01" src="/images/installation/installation01_thumb.jpg" /></a>
@@ -57,22 +57,15 @@
   
 </div>
 
-<script>
-  var container = document.querySelector('#installation');
-  var msnry;
-  imagesLoaded( container, function() {
-    msnry = new Masonry( container, { itemSelector: '.item', gutter: 3, isFitWidth: true } );
-  });
+<div id="spinner">
+  <div class="bounce1"></div>
+  <div class="bounce2"></div>
+  <div class="bounce3"></div>
+</div>
 
-  $('.gallery').colorbox({
-    rel:'gallery',
-    transition:"none",
-    height:"75%",
-    closeButton: false,
-    previous: "",
-    next: "",
-    current: ""
-  });
+<script>
+  gallery(document.querySelector('#installation'), { itemSelector: '.item', gutter: 3, isFitWidth: true });
+  $('.gallery').colorbox(colorbox_options);
 </script>
 
     </div>

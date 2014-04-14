@@ -38,10 +38,10 @@
       </nav>
       <h1><a href="/">Mathilde Porée</a></h1>
     </header>
-    <div class="container">
+    <div class="container min360">
       
 
-<div id="photographie" class="center">
+<div id="photographie" class="center-block none">
   
   <div class="item p2">
     <a class="gallery" title="Poussière, 2012, photographie numérique, 49x61cm" href="/images/photographie/poussiere/poussiere01.jpg"><img alt="poussiere01" src="/images/photographie/poussiere/poussiere01_thumb.jpg" /></a>
@@ -162,22 +162,15 @@
   
 </div>
 
-<script>
-  var container = document.querySelector('#photographie');
-  var msnry;
-  imagesLoaded( container, function() {
-    msnry = new Masonry( container, { itemSelector: '.item', gutter: 3, isFitWidth: true } );
-  });
+<div id="spinner">
+  <div class="bounce1"></div>
+  <div class="bounce2"></div>
+  <div class="bounce3"></div>
+</div>
 
-  $('.gallery').colorbox({
-    rel:'gallery',
-    transition:"none",
-    height:"75%",
-    closeButton: false,
-    previous: "",
-    next: "",
-    current: ""
-  });
+<script>
+  gallery(document.querySelector('#photographie'), { itemSelector: '.item', gutter: 3, isFitWidth: true });
+  $('.gallery').colorbox(colorbox_options);
 </script>
 
     </div>

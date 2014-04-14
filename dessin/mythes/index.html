@@ -38,10 +38,10 @@
       </nav>
       <h1><a href="/">Mathilde Porée</a></h1>
     </header>
-    <div class="container">
+    <div class="container min360">
       
 
-<div id="mythes" class="center">
+<div id="mythes" class="center-block none">
   
   <div class="item p5">
     <a class="gallery" title="Mythes, 2009-2010, stylo, 14x14cm" href="/dessin/images/mythes/mythes01.jpg"><img alt="mythes01" src="/images/mythes/mythes01_thumb.jpg" /></a>
@@ -245,22 +245,15 @@
   
 </div>
 
-<script>
-  var container = document.querySelector('#mythes');
-  var msnry;
-  imagesLoaded( container, function() {
-    msnry = new Masonry( container, { itemSelector: '.item', gutter: 10, isFitWidth: true } );
-  });
+<div id="spinner">
+  <div class="bounce1"></div>
+  <div class="bounce2"></div>
+  <div class="bounce3"></div>
+</div>
 
-  $('.gallery').colorbox({
-    rel:'gallery',
-    transition:"none",
-    height:"75%",
-    closeButton: false,
-    previous: "",
-    next: "",
-    current: ""
-  });
+<script>
+  gallery(document.querySelector('#mythes'), { itemSelector: '.item', gutter: 10, isFitWidth: true });
+  $('.gallery').colorbox(colorbox_options);
 </script>
 
     </div>
