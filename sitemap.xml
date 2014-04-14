@@ -1,61 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://www.mathildeporee.fr/cv/</loc>
+    <lastmod>2014-04-14T00:00:00+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>http://www.mathildeporee.fr/dessin/herbier/</loc>
+    <lastmod>2014-04-14T00:00:00+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>http://www.mathildeporee.fr/dessin/mythes/</loc>
+    <lastmod>2014-04-14T00:00:00+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>http://www.mathildeporee.fr/dessin/</loc>
+    <lastmod>2014-04-14T00:00:00+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>http://www.mathildeporee.fr/evenements/</loc>
+    <lastmod>2014-04-14T00:00:00+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>http://www.mathildeporee.fr/</loc>
     <lastmod>2014-04-14T00:00:00+02:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
-    <loc>http://www.mathildeporee.fr/cv</loc>
+    <loc>http://www.mathildeporee.fr/installation/</loc>
     <lastmod>2014-04-14T00:00:00+02:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>http://www.mathildeporee.fr/dessin/herbier</loc>
-    <lastmod>2014-04-14T00:00:00+02:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  <url>
-    <loc>http://www.mathildeporee.fr/dessin/mythes</loc>
-    <lastmod>2014-04-14T00:00:00+02:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  <url>
-    <loc>http://www.mathildeporee.fr/dessin</loc>
+    <loc>http://www.mathildeporee.fr/liens/</loc>
     <lastmod>2014-04-14T00:00:00+02:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>http://www.mathildeporee.fr/evenements</loc>
-    <lastmod>2014-04-14T00:00:00+02:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>http://www.mathildeporee.fr</loc>
-    <lastmod>2014-04-14T00:00:00+02:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>http://www.mathildeporee.fr/installation</loc>
-    <lastmod>2014-04-14T00:00:00+02:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>http://www.mathildeporee.fr/liens</loc>
-    <lastmod>2014-04-14T00:00:00+02:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>http://www.mathildeporee.fr/photographie</loc>
+    <loc>http://www.mathildeporee.fr/photographie/</loc>
     <lastmod>2014-04-14T00:00:00+02:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
