@@ -9,7 +9,7 @@ title: Mathilde Porée &mdash; Installation
   ]
 %>
 
-<div id="installation" class="center">
+<div id="installation" class="center-block none">
   <% installation.each do |image| %>
   <div class="item p2">
     <%= gallery image, "installation" %>
@@ -17,20 +17,13 @@ title: Mathilde Porée &mdash; Installation
   <% end %>
 </div>
 
-<script>
-  var container = document.querySelector('#installation');
-  var msnry;
-  imagesLoaded( container, function() {
-    msnry = new Masonry( container, { itemSelector: '.item', gutter: 3, isFitWidth: true } );
-  });
+<div id="spinner">
+  <div class="bounce1"></div>
+  <div class="bounce2"></div>
+  <div class="bounce3"></div>
+</div>
 
-  $('.gallery').colorbox({
-    rel:'gallery',
-    transition:"none",
-    height:"75%",
-    closeButton: false,
-    previous: "",
-    next: "",
-    current: ""
-  });
+<script>
+  gallery(document.querySelector('#installation'), { itemSelector: '.item', gutter: 3, isFitWidth: true });
+  $('.gallery').colorbox(colorbox_options);
 </script>

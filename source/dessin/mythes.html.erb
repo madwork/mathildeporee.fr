@@ -5,7 +5,7 @@ title: Mathilde Porée &mdash; Mythes
   mythes = (1..50).map{ |i| { name: "mythes#{sprintf("%02d", i)}", title: "Mythes, 2009-2010, stylo, 14x14cm" } }
 %>
 
-<div id="mythes" class="center">
+<div id="mythes" class="center-block none">
   <% mythes.each do |image| %>
   <div class="item p5">
     <%= gallery image, "mythes" %>
@@ -13,20 +13,13 @@ title: Mathilde Porée &mdash; Mythes
   <% end %>
 </div>
 
-<script>
-  var container = document.querySelector('#mythes');
-  var msnry;
-  imagesLoaded( container, function() {
-    msnry = new Masonry( container, { itemSelector: '.item', gutter: 10, isFitWidth: true } );
-  });
+<div id="spinner">
+  <div class="bounce1"></div>
+  <div class="bounce2"></div>
+  <div class="bounce3"></div>
+</div>
 
-  $('.gallery').colorbox({
-    rel:'gallery',
-    transition:"none",
-    height:"75%",
-    closeButton: false,
-    previous: "",
-    next: "",
-    current: ""
-  });
+<script>
+  gallery(document.querySelector('#mythes'), { itemSelector: '.item', gutter: 10, isFitWidth: true });
+  $('.gallery').colorbox(colorbox_options);
 </script>
