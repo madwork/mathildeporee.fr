@@ -5,6 +5,25 @@ title: Mathilde Porée &mdash; En ce moment
   <div class="row">
     <div class="col-md-3 col-md-offset-3">
       <p>
+        The Curator presents<br>
+        OBSESSION: Love, Ritual, Collection<br>
+        EMBASSY TEA GALLERY<br>
+        195 - 205 Union Street London SE1 0LN<br>
+        Exhibition open by appointment only 24th June - 27th June<br>
+        PRIVATE VIEW FRIDAY 27TH JUNE 6PM - 9PM<br>
+        Exhibition continues 28th - 29th JUNE<br>
+        A group show in aid of OCD UK<br>
+      </p>
+    </div>
+    <div class="col-md-6">
+      <% link_to "../images/evenements/flyer-obsession-2014.jpg", class: "flyer" do %>
+        <%= image_tag "evenements/flyer-obsession-2014.jpg", alt: "flyer-obsession-2014" %>
+      <% end %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-3 col-md-offset-3">
+      <p>
         BLEU<br>
         BLANC<br>
         COSMIQUE<br>
@@ -25,7 +44,9 @@ title: Mathilde Porée &mdash; En ce moment
       </p>
     </div>
     <div class="col-md-6">
-      <%= image_tag "evenements/flyer-bleu-blanc-cosmique.jpg", alt: "flyer-bleu-blanc-cosmique" %>
+      <% link_to "../images/evenements/flyer-bleu-blanc-cosmique.jpg", class: "flyer" do %>
+        <%= image_tag "evenements/flyer-bleu-blanc-cosmique.jpg", alt: "flyer-bleu-blanc-cosmique" %>
+      <% end %>
     </div>
   </div>
   <div class="row">
@@ -36,7 +57,9 @@ title: Mathilde Porée &mdash; En ce moment
       </p>
     </div>
     <div class="col-md-6">
-      <%= image_tag "evenements/flyer-mauvaises-graines.jpg", alt: "flyer-mauvaises-graines" %>
+      <% link_to "../images/evenements/flyer-mauvaises-graines.jpg", class: "flyer" do %>
+        <%= image_tag "evenements/flyer-mauvaises-graines.jpg", alt: "flyer-mauvaises-graines" %>
+      <% end %>
     </div>
   </div>
   <div class="row">
@@ -50,7 +73,9 @@ title: Mathilde Porée &mdash; En ce moment
       </p>
     </div>
     <div class="col-md-6">
-      <%= image_tag "evenements/flyer-anonymous-drawings-2013-eindhoven.jpg", alt: "flyer-anonymous-drawings-2013-eindhoven" %>
+      <% link_to "../images/evenements/flyer-anonymous-drawings-2013-eindhoven.jpg", class: "flyer" do %>
+        <%= image_tag "evenements/flyer-anonymous-drawings-2013-eindhoven.jpg", alt: "flyer-anonymous-drawings-2013-eindhoven" %>
+      <% end %>
     </div>
   </div>
   <div class="row">
@@ -64,7 +89,9 @@ title: Mathilde Porée &mdash; En ce moment
       </p>
     </div>
     <div class="col-md-6">
-      <%= image_tag "evenements/flyer-cutlog-nyc-2013.jpg", alt: "flyer-cutlog-nyc-2013" %>
+      <% link_to "../images/evenements/flyer-cutlog-nyc-2013.jpg", class: "flyer" do %>
+        <%= image_tag "evenements/flyer-cutlog-nyc-2013.jpg", alt: "flyer-cutlog-nyc-2013" %>
+      <% end %>
     </div>
   </div>
   <div class="row">
@@ -76,7 +103,9 @@ title: Mathilde Porée &mdash; En ce moment
       </p>
     </div>
     <div class="col-md-6">
-      <%= image_tag "evenements/flyer-anonymous-drawings-2013.jpg", alt: "flyer-anonymous-drawings-2013" %>
+      <% link_to "../images/evenements/flyer-anonymous-drawings-2013.jpg", class: "flyer" do %>
+        <%= image_tag "evenements/flyer-anonymous-drawings-2013.jpg", alt: "flyer-anonymous-drawings-2013" %>
+      <% end %>
     </div>
   </div>
   <div class="row">
@@ -88,7 +117,13 @@ title: Mathilde Porée &mdash; En ce moment
       </p>
     </div>
     <div class="col-md-6">
-      <%= image_tag "evenements/flyer-post-mod-2013.jpg", alt: "flyer-post-mod-2013" %>
+      <% link_to "../images/evenements/flyer-post-mod-2013.jpg", class: "flyer" do %>
+        <%= image_tag "evenements/flyer-post-mod-2013.jpg", alt: "flyer-post-mod-2013" %>
+      <% end %>
     </div>
   </div>
 </div>
+
+<script>
+  $('.flyer').colorbox(colorbox_options);
+</script>
