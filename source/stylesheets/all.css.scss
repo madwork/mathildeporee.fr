@@ -3,7 +3,17 @@
 
 @charset "utf-8";
 
-@import url('/fonts/KozGoPr6N-Light.otf');
+@font-face {
+  font-family: 'KozGoPr6N-Light';
+  src: url('/fonts/KozGoPr6N-Light.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Overlock';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Overlock'), local('Overlock-Regular'), url(http://themes.googleusercontent.com/static/fonts/overlock/v3/Pr-80_x4SIOocpxz2VxC5XYhjbSpvc47ee6xR_80Hnw.woff) format('woff');
+}
 
 $color: #4d4d4d;
 $color-light: #6d6d6d;
@@ -11,7 +21,7 @@ $color-lighter: #9d9d9d;
 
 body {
   background: #fff;
-  font-family: 'KozGoPr6N-Light';
+  font-family: 'KozGoPr6N-Light', 'Overlock', 'sans-serif';
   color: $color;
 }
 
