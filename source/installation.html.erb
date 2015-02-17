@@ -3,14 +3,17 @@ title: Mathilde Porée &mdash; Installation
 ---
 <%
   installation = [
-    { name: "installation01", title: "Vue d'exposition, Portbail, 2010" },
-    { name: "installation02", title: "Vue d'exposition, Portbail, 2010" },
-    { name: "installation03", title: "Vue d'exposition, Portbail, 2010" }
+    { name: "installation01", title: "Vue d'exposition, Portbail" },
+    { name: "installation03", title: "Vue d'exposition, Portbail" },
+    { name: "installation04", title: "Vue d'exposition, Mauvaises Graines, Le45TER" },
+    { name: "installation05", title: "Vue d'exposition, Entre Mythes et Réaliteés" },
+    { name: "installation06", title: "Vue d'exposition, Nêtre, Plateforme" },
+    { name: "variations-expo", title: "Vue d'exposition, Mauvaises Graines, Le45TER" }
   ]
 %>
 
 <div id="installation" class="center-block none">
-  <% installation.each do |image| %>
+  <% installation.reverse.each do |image| %>
   <div class="item p2">
     <%= gallery image, "installation" %>
   </div>
