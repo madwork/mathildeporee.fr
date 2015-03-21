@@ -21,7 +21,7 @@ title: Mathilde Porée &mdash; Dessin
 %>
 
 <div id="dessin" class="center-block none">
-  <% gallery.each do |image| %>
+  <% gallery.shuffle.each do |image| %>
   <div class="item p5">
     <%= gallery image, "dessin" %>
   </div>
